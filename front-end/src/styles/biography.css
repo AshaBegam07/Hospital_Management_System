@@ -1,0 +1,43 @@
+.container.biography {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .banner {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .biography-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .biography-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #080808;
+    margin-bottom: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .biography-intro,
+  .biography-details,
+  .biography-vision,
+  .biography-closing {
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 2px;
+  word-spacing: 5px;
+    color: #080808;
+    margin-bottom: 15px;
+    max-width: 850px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  

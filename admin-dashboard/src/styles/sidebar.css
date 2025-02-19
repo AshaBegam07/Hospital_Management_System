@@ -1,0 +1,135 @@
+/* General Wrapper for Hamburger */
+.wrapper {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    display: none; /* Hide by default */
+  }
+  
+  /* Hamburger Menu */
+  .hamburger {
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .hamburger:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Sidebar Container */
+  .sidebar {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 100%;
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    transition: left 0.3s ease;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Sidebar Hidden for Medium/Small Screens */
+  .sidebar.show {
+    left: 0; /* Show the sidebar when toggled */
+  }
+  
+  @media (max-width: 1024px) {
+    .sidebar {
+      left: -250px; /* Hidden by default on smaller screens */
+    }
+  
+    .wrapper {
+      display: block; /* Show the hamburger only for smaller screens */
+    }
+  }
+  
+  /* Theme Toggle */
+  .theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--toggle-bg);
+    transition: background-color 0.3s ease;
+  }
+  
+  .theme-toggle:hover {
+    background-color: var(--toggle-hover);
+  }
+  
+  .theme-icon {
+    font-size: 1.5rem;
+  }
+  
+  /* Sidebar Links */
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .links div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .links div:hover {
+    background-color: var(--link-hover-bg);
+    color: var(--link-hover-text);
+  }
+  
+  .links div span {
+    font-size: 1rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 200px;
+    }
+  
+    .links div {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sidebar {
+      width: 180px;
+    }
+  
+    .hamburger {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Theme Variables */
+  :root {--sidebar-bg: #f9f9f9;
+    --sidebar-text: #333333;
+    --toggle-bg: #e0e0e0;
+    --toggle-hover: #cccccc;
+    --link-hover-bg: #cccccc;
+    --link-hover-text: #333333;
+  }
+  
+  
+  

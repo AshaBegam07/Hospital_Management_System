@@ -1,0 +1,142 @@
+/* Blood Bank Container */
+.blood-bank-container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out; /* Smooth transition for container */
+}
+
+/* Title Styling and Animation */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Search Bar Styling and Animation */
+.search-section input {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.search-section input:focus {
+  background-color: #e9f7ef;
+  border-color: #16a085;
+}
+
+.search-btn {
+  padding: 10px 15px;
+  background-color: #16a085;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: #1abc9c;
+  transform: translateY(-2px);
+}
+
+/* Table Styles */
+.blood-data table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+.blood-data table th,
+.blood-data table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.blood-data table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.blood-data table tr:hover {
+  background-color: #e9f7ef;
+  transform: translateY(-2px); /* Smooth hover effect */
+  transition: all 0.3s ease;
+}
+
+/* Add Donation Form */
+.donation-section select,
+.donation-section input {
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.donation-section input:focus,
+.donation-section select:focus {
+  background-color: #e9f7ef;
+  border-color: #16a085;
+}
+
+.donate-btn {
+  padding: 12px 20px;
+  background-color: #16a085;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.donate-btn:hover {
+  background-color: #1abc9c;
+  transform: translateY(-2px);
+}
+
+/* Animation for New Donation Row */
+@keyframes slideUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.new-donation-row {
+  animation: slideUp 1s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blood-bank-container {
+    width: 95%;
+  }
+
+  .search-section input {
+    width: 100%;
+  }
+
+  .donation-section select,
+  .donation-section input {
+    width: 100%;
+  }
+
+  .donate-btn {
+    width: 100%;
+  }
+}
